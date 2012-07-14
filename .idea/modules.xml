@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$USER_HOME$/workspace/vc/Audiora/Audiora.iml" filepath="$USER_HOME$/workspace/vc/Audiora/Audiora.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MemriseDictionary.iml" filepath="$PROJECT_DIR$/MemriseDictionary.iml" />
+    </modules>
+  </component>
+</project>
+
