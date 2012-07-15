@@ -13,16 +13,20 @@ import java.util.List;
 public class MemriseDictionaryWordBuilder extends AsyncTask<Void, Void, List<LearntWord>>
 {
     private Context context;
+    private final String username;
+    private final Integer totalCount;
 
-    public MemriseDictionaryWordBuilder(Context context)
+    public MemriseDictionaryWordBuilder(Context context, String username, Integer totalCount)
     {
         this.context = context;
+        this.username = username;
+        this.totalCount = totalCount;
     }
 
     @Override
     protected List<LearntWord> doInBackground(Void... voids)
     {
-        JSONObject json = new RequestJson("http://www.memrise.com/api/1.0/itemuser/?format=json&user__username=fyska&limit=2000").getJSONFromURL();
+        JSONObject json = new RequestJson("http://www.memrise.com/api/1.0/itemuser/?format=json&user__username=" + username + "&limit=" + totalCount).getJSONFromURL();
 
         try
         {

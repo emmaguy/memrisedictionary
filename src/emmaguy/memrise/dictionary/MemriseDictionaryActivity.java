@@ -1,6 +1,7 @@
 package emmaguy.memrise.dictionary;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -22,11 +23,15 @@ public class MemriseDictionaryActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        Intent i = getIntent();
+        String username = i.getStringExtra("username");
+        Integer totalCount = i.getIntExtra("totalCount", 0);
+
         db = new DatabaseProvider(this);
         this.words = db.GetAllWords();
 
         if(this.words.size() <= 0)
-            new MemriseDictionaryWordBuilder(this).execute();
+            new MemriseDictionaryWordBuilder(this, username, totalCount).execute();
         else
             AddWordsToListView(this.words);
 
