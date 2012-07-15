@@ -2,26 +2,12 @@ package emmaguy.memrise.dictionary;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.CoreProtocolPNames;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 
 public class MemriseDictionaryWordBuilder extends AsyncTask<Void, Void, List<LearntWord>>
@@ -36,7 +22,7 @@ public class MemriseDictionaryWordBuilder extends AsyncTask<Void, Void, List<Lea
     @Override
     protected List<LearntWord> doInBackground(Void... voids)
     {
-        JSONObject json = new RequestJson("http://www.memrise.com/api/1.0/itemuser/?format=json&user__username=fyska&limit=15").getJSONFromURL();
+        JSONObject json = new RequestJson("http://www.memrise.com/api/1.0/itemuser/?format=json&user__username=fyska&limit=2000").getJSONFromURL();
 
         try
         {
@@ -64,6 +50,6 @@ public class MemriseDictionaryWordBuilder extends AsyncTask<Void, Void, List<Lea
     @Override
     protected void onPostExecute(List<LearntWord> words)
     {
-        ((MemriseDictionaryActivity)context).AddWordsToListView(words);
+        ((MemriseDictionaryActivity)context).UpdateDbAndAddWordsToListView(words);
     }
 }
