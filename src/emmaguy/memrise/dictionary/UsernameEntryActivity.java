@@ -19,6 +19,12 @@ public class UsernameEntryActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.username_screen);
 
+        DatabaseProvider db = new DatabaseProvider(this);
+        if(db.GetAllWords().size() > 0)
+        {
+            startActivity(new Intent(getApplicationContext(), MemriseDictionaryActivity.class));
+        }
+
         Button btnGo = (Button) findViewById(R.id.btnGo);
 
         btnGo.setOnClickListener(new View.OnClickListener()
