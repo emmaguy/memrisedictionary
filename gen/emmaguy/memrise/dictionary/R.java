@@ -14,11 +14,13 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int btnGo=0x7f050005;
+        public static final int actionBarLayout=0x7f050002;
+        public static final int btnGo=0x7f050007;
         public static final int learntWord=0x7f050001;
-        public static final int lstView=0x7f050003;
-        public static final int txtSearch=0x7f050002;
-        public static final int txtUsernameEntry=0x7f050004;
+        public static final int lstView=0x7f050005;
+        public static final int sync=0x7f050003;
+        public static final int txtSearch=0x7f050004;
+        public static final int txtUsernameEntry=0x7f050006;
         public static final int word=0x7f050000;
     }
     public static final class layout {

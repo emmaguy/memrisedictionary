@@ -1,9 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:scrollbars="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/actionBarLayout"
+                  android:orientation="horizontal"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:height="32dp"
+                  android:gravity="left|top"
+                  android:background="#2B60DE"
+                  android:paddingTop="2dp"
+                  android:paddingBottom="2dp">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:orientation="horizontal"
+                      android:layout_height="wrap_content"
+                      android:gravity="left|center_vertical"
+                      android:layout_gravity="left"
+                      android:layout_width="wrap_content">
+
+            <ImageButton android:id="@+id/sync"
+                         android:layout_width="32dp"
+                         android:layout_height="32dp"
+                         android:background="@drawable/ic_launcher"
+                        android:text="Sync"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
     <EditText   android:id="@+id/txtSearch"
                 android:layout_height="70px"
                 android:layout_width="match_parent"/>
@@ -11,5 +40,5 @@
     <ListView   android:id="@+id/lstView"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"/>
-</LinearLayout>
 
+</LinearLayout>

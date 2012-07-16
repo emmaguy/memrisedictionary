@@ -12,7 +12,8 @@
     <EditText   android:id="@+id/txtUsernameEntry"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dip"/>
+                android:layout_marginBottom="10dip"
+                android:text="fyska"/>
 
     <Button     android:id="@+id/btnGo"
                 android:layout_width="fill_parent"

@@ -39,7 +39,6 @@ public class UsernameEntryActivity extends Activity
                 }
 
                 JSONObject json = new RequestJson("http://www.memrise.com/api/1.0/itemuser/?format=json&user__username=" + username  + "&limit=1").getJSONFromURL();
-
                 if(json == null)
                 {
                     return;

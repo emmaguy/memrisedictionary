@@ -5,8 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -16,6 +17,8 @@ public class MemriseDictionaryActivity extends Activity
 {
     DatabaseProvider db;
     List<LearntWord> words;
+    private String username;
+    private int totalCount;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -24,21 +27,46 @@ public class MemriseDictionaryActivity extends Activity
         setContentView(R.layout.main);
 
         Intent i = getIntent();
-        String username = i.getStringExtra("username");
-        Integer totalCount = i.getIntExtra("totalCount", 0);
+        username = i.getStringExtra("username");
+        totalCount = i.getIntExtra("totalCount", 0);
 
         db = new DatabaseProvider(this);
         this.words = db.GetAllWords();
 
         if(this.words.size() <= 0)
-            new MemriseDictionaryWordBuilder(this, username, totalCount).execute();
+        {
+            getWordsFromMemrise();
+        }
         else
-            AddWordsToListView(this.words);
+        {
+            addWordsToListView(this.words);
+        }
 
-        InitialiseSearchListener();
+        initialiseSearchListener();
+        initialiseActionBarListener();
     }
 
-    private void InitialiseSearchListener()
+    private void initialiseActionBarListener()
+    {
+        ImageButton sync = (ImageButton)findViewById(R.id.sync);
+        sync.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                words = new ArrayList<LearntWord>();
+                db.delete();
+                db.create();
+                getWordsFromMemrise();
+            }
+        });
+    }
+
+    private void getWordsFromMemrise()
+    {
+        new MemriseDictionaryWordBuilder(this, username, totalCount).execute();
+    }
+
+    private void initialiseSearchListener()
     {
         final EditText searchBox = (EditText)findViewById(R.id.txtSearch);
         searchBox.addTextChangedListener(new TextWatcher()
@@ -55,8 +83,8 @@ public class MemriseDictionaryActivity extends Activity
                 String s = searchBox.getText().toString().toLowerCase().trim();
                 if(s.isEmpty())
                 {
-                    ClearListView();
-                    AddWordsToListView(words);
+                    clearListView();
+                    addWordsToListView(words);
                     return;
                 }
 
@@ -69,8 +97,8 @@ public class MemriseDictionaryActivity extends Activity
                     }
                 }
 
-                ClearListView();
-                AddWordsToListView(filteredWords);
+                clearListView();
+                addWordsToListView(filteredWords);
             }
 
             @Override
@@ -81,7 +109,7 @@ public class MemriseDictionaryActivity extends Activity
         });
     }
 
-    private void ClearListView()
+    private void clearListView()
     {
         ListView lstWords = (ListView)findViewById(R.id.lstView);
         lstWords.setAdapter(null);
@@ -89,12 +117,12 @@ public class MemriseDictionaryActivity extends Activity
 
     public void UpdateDbAndAddWordsToListView(List<LearntWord> words)
     {
+        this.words = words;
         db.SaveWords(words);
-
-        AddWordsToListView(words);
+        addWordsToListView(words);
     }
 
-    private void AddWordsToListView(List<LearntWord> words)
+    private void addWordsToListView(List<LearntWord> words)
     {
         ListView lstWords = (ListView)findViewById(R.id.lstView);
         lstWords.setAdapter(new LearntWordAdapter(this, R.layout.learnt_word_layout, words));

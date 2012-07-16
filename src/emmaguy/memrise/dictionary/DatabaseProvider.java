@@ -14,8 +14,6 @@ import java.util.List;
 
 public class DatabaseProvider extends SQLiteOpenHelper
 {
-    private static String DATABASE_PATH = "";
-
     private static final String DATABASE_NAME = "MemriseDictionary";
     private static final String WORDS_TABLE_NAME = "Words";
 
@@ -27,8 +25,6 @@ public class DatabaseProvider extends SQLiteOpenHelper
     DatabaseProvider(Context context)
     {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-
-        DATABASE_PATH = "/data/data/" + context.getApplicationContext().getPackageName() + "/databases/";
     }
 
     public List<LearntWord> GetAllWords()
@@ -109,7 +105,24 @@ public class DatabaseProvider extends SQLiteOpenHelper
     {
         Log.w("db", "Upgrading database from version " + oldVersion + " to "
                 + newVersion + ", which will destroy all old data");
-        db.execSQL("DROP TABLE IF EXISTS " + WORDS_TABLE_NAME);
+        delete(db);
         onCreate(db);
+    }
+
+    public void create()
+    {
+        SQLiteDatabase database = getWritableDatabase();
+        onCreate(database);
+    }
+
+    public void delete()
+    {
+        SQLiteDatabase database = getWritableDatabase();
+        delete(database);
+    }
+
+    private void delete(SQLiteDatabase db)
+    {
+        db.execSQL("DROP TABLE IF EXISTS " + WORDS_TABLE_NAME);
     }
 }

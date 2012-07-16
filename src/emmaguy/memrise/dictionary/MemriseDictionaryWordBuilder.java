@@ -1,5 +1,6 @@
 package emmaguy.memrise.dictionary;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
@@ -15,12 +16,19 @@ public class MemriseDictionaryWordBuilder extends AsyncTask<Void, Void, List<Lea
     private Context context;
     private final String username;
     private final Integer totalCount;
+    private ProgressDialog dialog;
 
     public MemriseDictionaryWordBuilder(Context context, String username, Integer totalCount)
     {
         this.context = context;
         this.username = username;
         this.totalCount = totalCount;
+    }
+
+    @Override
+    protected void onPreExecute()
+    {
+        dialog = ProgressDialog.show(this.context, "Syncing words", "Syncing your words from Memrise. This may take a few minutes, please wait...", true, false);
     }
 
     @Override
@@ -55,5 +63,6 @@ public class MemriseDictionaryWordBuilder extends AsyncTask<Void, Void, List<Lea
     protected void onPostExecute(List<LearntWord> words)
     {
         ((MemriseDictionaryActivity)context).UpdateDbAndAddWordsToListView(words);
+        dialog.dismiss();
     }
 }
