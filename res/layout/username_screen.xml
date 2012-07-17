@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:gravity="center_horizontal">
 
-    <TextView   android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Memrise username: "/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="250dp"
+                  android:layout_height="250dp">
+        <ImageButton android:id="@+id/sync"
+                     android:layout_width="250dp"
+                     android:layout_height="250dp"
+                     android:background="@drawable/bookmark"
+                     android:gravity="center_horizontal"/>
+    </LinearLayout>
+    <TextView android:layout_width="300dp"
+              android:layout_height="wrap_content"
+              android:text="Memrise username:"/>
 
-    <EditText   android:id="@+id/txtUsernameEntry"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dip"
-                android:text="fyska"/>
+    <EditText android:id="@+id/txtUsernameEntry"
+              android:layout_width="300dp"
+              android:layout_height="wrap_content"
+              android:layout_marginBottom="10dip"/>
 
-    <Button     android:id="@+id/btnGo"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Go!"
-                android:layout_marginTop="15dip"/>
+    <Button android:id="@+id/btnGo"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:text="Go!"
+            android:layout_marginTop="15dip"/>
 
 </LinearLayout>
-
