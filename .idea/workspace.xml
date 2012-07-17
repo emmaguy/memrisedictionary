@@ -14,15 +14,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19bee86c-7296-4ef2-82a2-3a802fe78918" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="C:\Users\Emma\IdeaProjects\MemriseDictionary\res\drawable-xhdpi\ic_launcher.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/emmaguy/memrise/dictionary/R.java" afterPath="$PROJECT_DIR$/gen/emmaguy/memrise/dictionary/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/username_screen.xml" afterPath="$PROJECT_DIR$/res/layout/username_screen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/DatabaseProvider.java" afterPath="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/DatabaseProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryActivity.java" afterPath="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryWordBuilder.java" afterPath="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryWordBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/UsernameEntryActivity.java" afterPath="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/UsernameEntryActivity.java" />
     </list>
     <ignored path="MemriseDictionary.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,33 +50,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryActivity.java" line="120" class="emmaguy.memrise.dictionary.MemriseDictionaryActivity" package="emmaguy.memrise.dictionary">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/DatabaseProvider.java" line="89" class="emmaguy.memrise.dictionary.DatabaseProvider" package="emmaguy.memrise.dictionary">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/DatabaseProvider.java" line="51" class="emmaguy.memrise.dictionary.DatabaseProvider" package="emmaguy.memrise.dictionary">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -184,32 +154,6 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryActivity.java" line="37" class="emmaguy.memrise.dictionary.MemriseDictionaryActivity" package="emmaguy.memrise.dictionary">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/UsernameEntryActivity.java" line="33" class="emmaguy.memrise.dictionary.UsernameEntryActivity$1" package="emmaguy.memrise.dictionary">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="false" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
     </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
@@ -254,7 +198,7 @@
       <file leaf-file-name="MemriseDictionaryActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="120" column="28" selection-start="3300" selection-end="3300" vertical-scroll-proportion="2.3988094">
+            <state line="110" column="0" selection-start="3020" selection-end="3020" vertical-scroll-proportion="0.15978456">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1305#1569#0" expanded="true" />
@@ -268,20 +212,8 @@
       <file leaf-file-name="MemriseDictionaryWordBuilder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryWordBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="7" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0">
+            <state line="13" column="38" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsernameEntryActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/UsernameEntryActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="69" selection-start="2178" selection-end="2178" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#852#2256#0" expanded="true" />
-                <element signature="e#2245#2246#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -289,17 +221,19 @@
       <file leaf-file-name="main.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="44" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
+            <state line="19" column="58" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <file leaf-file-name="DatabaseProvider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/DatabaseProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="39" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="47" column="29" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#981#993#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -326,13 +260,13 @@
         <option value="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/DictionaryProvider.java" />
         <option value="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/DatabaseHelper.java" />
         <option value="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/DatabaseProvider.java" />
-        <option value="$PROJECT_DIR$/res/layout/username_screen.xml" />
         <option value="$PROJECT_DIR$/res/menu/words_menu.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryWordBuilder.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/UsernameEntryActivity.java" />
         <option value="$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryActivity.java" />
+        <option value="$PROJECT_DIR$/res/layout/username_screen.xml" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
       </list>
     </option>
   </component>
@@ -454,42 +388,6 @@
               <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MemriseDictionary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MemriseDictionary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MemriseDictionary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MemriseDictionary" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -523,7 +421,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Android Logcat" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Console Colors" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -776,7 +674,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -788,12 +686,12 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6660959" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6660959" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22247532" sideWeight="0.67808217" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22247532" sideWeight="0.33390412" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -906,22 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/username_screen.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="16" selection-start="613" selection-end="613" vertical-scroll-proportion="0.3877551">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/DatabaseProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="935" selection-end="935" vertical-scroll-proportion="0.5230352">
-          <folding>
-            <element signature="e#981#993#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/workspace/vc/Audiora/src/dev/eguy/android/ShipManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="22" selection-start="79" selection-end="79" vertical-scroll-proportion="0.15342465">
@@ -943,30 +825,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="44" selection-start="156" selection-end="156" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="39" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryWordBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="7" selection-start="798" selection-end="798" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/UsernameEntryActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="69" selection-start="2178" selection-end="2178" vertical-scroll-proportion="0.0">
+        <state line="33" column="0" selection-start="946" selection-end="946" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#852#2256#0" expanded="true" />
             <element signature="e#2245#2246#0" expanded="true" />
@@ -974,9 +835,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="60" selection-start="875" selection-end="875" vertical-scroll-proportion="0.89504373">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/username_screen.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="49" selection-start="474" selection-end="485" vertical-scroll-proportion="0.24931507">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/DatabaseProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="29" selection-start="1546" selection-end="1546" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#981#993#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="58" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryWordBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="38" selection-start="334" selection-end="334" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/emmaguy/memrise/dictionary/MemriseDictionaryActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="120" column="28" selection-start="3300" selection-end="3300" vertical-scroll-proportion="2.3988094">
+        <state line="110" column="0" selection-start="3020" selection-end="3020" vertical-scroll-proportion="0.15978456">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1305#1569#0" expanded="true" />
