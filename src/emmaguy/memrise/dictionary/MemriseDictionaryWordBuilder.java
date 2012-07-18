@@ -62,7 +62,7 @@ public class MemriseDictionaryWordBuilder extends AsyncTask<Void, Void, List<Lea
     @Override
     protected void onPostExecute(List<LearntWord> words)
     {
-        ((MemriseDictionaryActivity)context).UpdateDbAndAddWordsToListView(words);
+        ((MemriseDictionaryActivity)context).updateDbAndAddWordsToListView(words);
         dialog.dismiss();
     }
 }

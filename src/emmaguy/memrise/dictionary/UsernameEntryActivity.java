@@ -69,4 +69,9 @@ public class UsernameEntryActivity extends Activity
             }
         });
     }
+
+    @Override
+    public void onBackPressed()
+    {
+    }
 }

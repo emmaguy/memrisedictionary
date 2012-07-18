@@ -43,10 +43,10 @@ public class MemriseDictionaryActivity extends Activity
         }
 
         initialiseSearchListener();
-        initialiseActionBarListener();
+        initialiseActionBarListeners();
     }
 
-    private void initialiseActionBarListener()
+    private void initialiseActionBarListeners()
     {
         ImageButton sync = (ImageButton)findViewById(R.id.sync);
         sync.setOnClickListener(new View.OnClickListener()
@@ -57,6 +57,18 @@ public class MemriseDictionaryActivity extends Activity
                 db.delete();
                 db.create();
                 getWordsFromMemrise();
+            }
+        });
+
+        ImageButton logout = (ImageButton)findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v)
+            {
+                words = new ArrayList<LearntWord>();
+                db.delete();
+                db.create();
+                startActivity(new Intent(getApplicationContext(), UsernameEntryActivity.class));
             }
         });
     }
@@ -115,7 +127,7 @@ public class MemriseDictionaryActivity extends Activity
         lstWords.setAdapter(null);
     }
 
-    public void UpdateDbAndAddWordsToListView(List<LearntWord> words)
+    public void updateDbAndAddWordsToListView(List<LearntWord> words)
     {
         this.words = words;
         db.SaveWords(words);
@@ -126,5 +138,10 @@ public class MemriseDictionaryActivity extends Activity
     {
         ListView lstWords = (ListView)findViewById(R.id.lstView);
         lstWords.setAdapter(new LearntWordAdapter(this, R.layout.learnt_word_layout, words));
+    }
+
+    @Override
+    public void onBackPressed()
+    {
     }
 }

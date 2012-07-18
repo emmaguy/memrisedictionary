@@ -30,37 +30,50 @@ public class DatabaseProvider extends SQLiteOpenHelper
     public List<LearntWord> GetAllWords()
     {
         List<LearntWord> words = new ArrayList<LearntWord>();
-        String[] columns = { WORD_COLUMN_NAME, DEFINITION_COLUMN_NAME};
+        String[] columns = {WORD_COLUMN_NAME, DEFINITION_COLUMN_NAME};
+
+        SQLiteDatabase database = null;
+        Cursor cur = null;
         try
         {
-            SQLiteDatabase database = getReadableDatabase();
-            Cursor cur = database.query(WORDS_TABLE_NAME, columns, null, null, null, null, null);
+            database = getReadableDatabase();
+            cur = database.query(WORDS_TABLE_NAME, columns, null, null, null, null, null);
 
-            if(cur.moveToFirst())
+            if (cur.moveToFirst())
             {
                 do
                 {
                     words.add(new LearntWord(cur.getString(0), cur.getString(1)));
                 }
-                while(cur.moveToNext());
+                while (cur.moveToNext());
             }
-            cur.close();
-            database.close();
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
             Log.e("db", ex.toString());
+        }
+        finally
+        {
+            if (cur != null)
+                cur.close();
+            if (database != null)
+                database.close();
         }
         return words;
     }
 
     public void SaveWords(List<LearntWord> words)
     {
-        if(words.size() <= 0)
+        if (words.size() <= 0)
+        {
+            Log.i("db", "No words to save, returning");
             return;
+        }
+
+        SQLiteDatabase database = null;
         try
         {
-            SQLiteDatabase database = getWritableDatabase();
+            database = getWritableDatabase();
             DatabaseUtils.InsertHelper ih = new DatabaseUtils.InsertHelper(database, WORDS_TABLE_NAME);
 
             final int wordColumn = ih.getColumnIndex(WORD_COLUMN_NAME);
@@ -68,7 +81,7 @@ public class DatabaseProvider extends SQLiteOpenHelper
 
             try
             {
-                for(LearntWord word : words)
+                for (LearntWord word : words)
                 {
                     ih.prepareForInsert();
 
@@ -77,13 +90,30 @@ public class DatabaseProvider extends SQLiteOpenHelper
 
                     ih.execute();
                 }
-            }
-            finally
+            } finally
             {
                 ih.close();
             }
+        } catch (Exception e)
+        {
+            Log.e("db", e.toString());
+        }
+        finally
+        {
+            if(database != null)
+                database.close();
+        }
+    }
 
-            database.close();
+    @Override
+    public void onCreate(SQLiteDatabase db)
+    {
+        try
+        {
+            db.execSQL("CREATE TABLE " + WORDS_TABLE_NAME +
+                    " (WordId INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    WORD_COLUMN_NAME + "  VARCHAR(128)," +
+                    DEFINITION_COLUMN_NAME + " Definition VARCHAR(128));");
         }
         catch (Exception e)
         {
@@ -92,21 +122,19 @@ public class DatabaseProvider extends SQLiteOpenHelper
     }
 
     @Override
-    public void onCreate(SQLiteDatabase db)
-    {
-        db.execSQL("CREATE TABLE " + WORDS_TABLE_NAME +
-                " (WordId INTEGER PRIMARY KEY AUTOINCREMENT," +
-                WORD_COLUMN_NAME + "  VARCHAR(128)," +
-                DEFINITION_COLUMN_NAME + " Definition VARCHAR(128));");
-    }
-
-    @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
-        Log.w("db", "Upgrading database from version " + oldVersion + " to "
-                + newVersion + ", which will destroy all old data");
-        delete(db);
-        onCreate(db);
+        try
+        {
+            Log.w("db", "Upgrading database from version " + oldVersion + " to "
+                    + newVersion + ", which will destroy all old data");
+            delete(db);
+            onCreate(db);
+        }
+        catch (Exception e)
+        {
+            Log.e("db", e.toString());
+        }
     }
 
     public void create()
@@ -123,6 +151,13 @@ public class DatabaseProvider extends SQLiteOpenHelper
 
     private void delete(SQLiteDatabase db)
     {
-        db.execSQL("DROP TABLE IF EXISTS " + WORDS_TABLE_NAME);
+        try
+        {
+            db.execSQL("DROP TABLE IF EXISTS " + WORDS_TABLE_NAME);
+        }
+        catch (Exception e)
+        {
+            Log.e("db", e.toString());
+        }
     }
 }
